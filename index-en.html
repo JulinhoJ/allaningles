@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <script>
+  window.pixelId = "67edf4c3c10671e61577006d";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favi.webp" type="image/png" />
+    <title>Help Guilherme</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/glide.core.min.css" />
+    <link rel="stylesheet" href="css/glide.theme.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script src="js/qrcode.min.js"></script>
+  </head>
+<script>
+  // Parameters to pass along
+  const paramsToKeep = [
+    "utm_source",
+    "utm_campaign",
+    "utm_medium",
+    "utm_content",
+    "utm_term",
+    "xcod"
+  ];
+
+  function getCurrentParams() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const result = {};
+    paramsToKeep.forEach(param => {
+      const value = urlSearchParams.get(param);
+      if (value) result[param] = value;
+    });
+    return result;
+  }
+
+  function buildQueryString(params) {
+    return Object.entries(params)
+      .map(([key, val]) => `${encodeURIComponent(key)}=${encodeURIComponent(val)}`)
+      .join("&");
+  }
+
+  function updateInternalLinks() {
+    const links = document.querySelectorAll("a[href]");
+    const currentParams = getCurrentParams();
+    if (Object.keys(currentParams).length === 0) return;
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+
+      // Only apply to relative links (within the site)
+      if (href.startsWith("/") || href.startsWith(window.location.origin)) {
+        const url = new URL(href, window.location.origin);
+        const linkParams = new URLSearchParams(url.search);
+
+        // Add desired parameters
+        for (const key in currentParams) {
+          linkParams.set(key, currentParams[key]);
+        }
+
+        url.search = linkParams.toString();
+        link.setAttribute("href", url.pathname + url.search);
+      }
+    });
+  }
+
+  // When the page loads, update the links
+  document.addEventListener("DOMContentLoaded", updateInternalLinks);
+</script>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a>
+            <img src="images/ajudelogo.png" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="post">
+      <h3>
+        💔 A Story of Love, Loss, and Hope - Help Guilherme
+      </h3>
+      <img src="images/mano1.jpeg" />
+      <div class="image-container">
+        <div class="likes-container">
+          <img src="images/boll.png" alt="Hearts" />
+          <span>117 hearts received ❤️</span>
+        </div>
+      </div>
+      <a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DONATE NOW</button>
+      </a>
+      <p><strong>Our parents passed away and we found ourselves alone against the world</strong></p>
+
+      <p>
+        Life has challenged us in ways I never imagined facing at such a young age. <strong>We lost our father, our mother...</strong> and this year, our grandfather too. Now it's just me, Gui, and our uncle trying to hold everything together.
+      </p>
+
+      <p>
+        <strong>Guilherme is a very special child. He has infantile cerebral palsy and needs 24-hour care — for eating, bathing, sleeping, everything. On top of that, he suffers from frequent seizures and convulsions.</strong>
+      </p>
+
+      <p>
+        Since we've been on our own, I've done everything humanly possible to give Gui a dignified life, but I have to be honest: it's getting harder every day.
+      </p>
+
+      <p>
+        We're in a desperate situation now. I'm unemployed, drowning in debt, behind on rent, and often without money for food. Gui's basic needs — diapers, hygiene items, proper nutrition, medications, and transportation to medical appointments — simply can't be covered by what little government assistance we receive.
+      </p>
+
+      <p>
+        "<strong>I've been trying to survive doing small jobs as a caricature artist, but it's nowhere near enough for everything we need.</strong>"
+      </p>
+
+      <p>
+        These are the thoughts that make me <strong>cry alone in the bathroom</strong> every night.
+      </p>
+
+      <p>
+        I've thought about giving up many times... <strong>Sadness and anxiety have become constant companions. But when I look at my brother, I remember why I'm here. He's my motivation. My purpose. I will never abandon him.</strong>
+      </p>
+
+      <p>
+        Being his brother isn't easy. But it's the greatest gift I've ever received. Gui teaches me about love every day — even without speaking a single word.
+      </p>
+
+      <p>
+        But the truth is... <strong>we've reached a breaking point.</strong> I'm unemployed. The debts keep piling up. The rent is overdue. Sometimes we don't even have food to eat. And Gui's basic needs — diapers, special formula, medication, hygiene products — simply can't be covered by the little we get from the government.
+      </p>
+
+      <p>
+        I try to make some money as a caricature artist, drawing at parties, events, or taking commissions. But it's very, very little.
+      </p>
+
+      <p>
+        But then I look at Guilherme... and I remember why I'm here.
+
+He depends on me. And I promised myself that as long as I'm alive, he will never be abandoned. Never.
+      </p>
+
+      <p>
+        I've thought about giving up so many times. Sometimes the sadness hits so hard that I wonder if I can keep going.
+
+But then I look at Guilherme... and I remember why I'm here.
+
+He depends on me. And I promised myself that as long as I'm alive, he will never be abandoned. Never.
+      </p>
+      <img src="images/laudo.webp" style="width: 90%; height: auto" />
+    
+      <p>
+        It's the same <strong>technology</strong> used by <strong>surgeons</strong> to operate remotely, adapted to restore <strong>independence</strong> to children like Guilherme.
+      </p>
+      <img src="images/mano2.jpeg" style="width: 90%; height: auto" />
+      <p>If you're reading this now, I'm asking you with an open heart: please help us.
+
+Watch our video. See with your own eyes who Guilherme is, who we are.
+
+If you can donate any amount, know that you'll be helping two siblings continue fighting together — with dignity, with love, with hope.
+
+You could be the difference between pain and relief. Between despair and hope.
+      </p>
+      <a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DONATE NOW</button>
+      </a>
+      <p><strong>You'll receive:</strong></p>
+
+      <p><strong>● Weekly updates</strong> on our journey</p>
+      <p><strong>● Video of his first hug</strong> with the prosthesis</p>
+      <p><strong>● Your name on our angel list</strong> (if you wish)</p>
+
+      <p>
+        <strong>Please share our story</strong>. Each share is a <strong>new chance</strong> to give my brother back his childhood.
+      </p>
+
+      <p><strong>God bless you and your family</strong>.</p>
+
+      <p><strong>Sincerely: Miguel, Guilherme's brother</strong>.</p>
+
+      <div id="button-section">
+        <div class="progress-content">
+          <div class="progress-text">
+            <h4>Raised</h4>
+            <div class="progress-values">
+              <p>$4,690.08</p>
+              <p>$17,400.00</p>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 27%">
+              <strong>27%</strong>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="text-align: center;">Choose an amount <br> to donate</h4>
+        <p class="donation-multiplier"><strong>✨ DOUBLED DONATION! ✨</strong> Donations of $10 or more will be matched 2x by our sponsors and business partners supporting our campaign! Your help goes twice as far until April 15th. Don't miss this chance to maximize your impact on Guilherme's life!</p>
+        <div class="buttons-section">
+          <div class="buttons-section1">
+            <a href="#">
+              <button class="post-button2">$5</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2" style="border: 2px solid #ffcc00; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);">$10</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">$15</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">$30</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">$50</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">$70</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">$90</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">$120</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">$180</button>
+            </a>
+          </div>
+          <div class="buttons-section1">
+            <a href="#">
+              <button class="post-button2">$8</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">$12</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">$20</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">$40</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">$60</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">$80</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">$100</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">$150</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">$200</button>
+            </a>
+          </div>
+        </div>
+          <div class="sc-jXbUNg gNPJrz">
+            <div class="sc-jXbUNg dHwLb">
+              <div class="sc-jXbUNg jbBvcf"></div>
+              <div class="sc-jXbUNg dTrGCo sc-gRtvSG fpURXW"></div>
+            </div>
+          </div>
+
+          <div class="button-pix">
+            <div class="texto" id="1">
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-section logo-section">
+            <a>
+              <img src="images/ajudelogo.png" />
+            </a>
+          </div>
+
+          <div class="footer-bottom">
+            <p>2025 - All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+
+      <script data-cfasync="false" src="js/email-decode.min.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/pix.js"></script>
+    </div>
+  </body>
+</html> 
