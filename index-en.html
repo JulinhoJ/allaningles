@@ -200,76 +200,65 @@ You could be the difference between pain and relief. Between despair and hope.
           </div>
         </div>
 
-        <h4 style="text-align: center;">Choose an amount <br> to donate</h4>
-        <p class="donation-multiplier"><strong>✨ DOUBLED DONATION! ✨</strong> Donations of $30 or more will be matched 2x by our sponsors and business partners supporting our campaign! Your help goes twice as far until April 15th. Don't miss this chance to maximize your impact on Guilherme's life!</p>
+        <h4 style="text-align: center;">Choose your donation level</h4>
+        <p class="donation-multiplier"><strong>✨ DOUBLED DONATION! ✨</strong> All donation levels will be matched 2x by our sponsors and business partners! Your generosity goes twice as far until April 15th. Choose your angel level and maximize your impact on Guilherme's life today!</p>
         <div class="buttons-section">
           <div class="buttons-section1">
-            <a href="#">
-              <button class="post-button2">$5</button>
+            <a href="https://ironbase.mycartpanda.com/checkout/180653082:1" target="_blank">
+              <button class="donation-btn" style="border: 2px solid #ffcc00; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);">
+                <span class="donation-title">Guardian Angel</span>
+                <span class="donation-amount">$10</span>
+              </button>
             </a>
 
-            <a href="#">
-              <button class="post-button2" style="border: 2px solid #ffcc00; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);">$10</button>
+            <a href="https://ironbase.mycartpanda.com/checkout/180653230:1" target="_blank">
+              <button class="donation-btn">
+                <span class="donation-title">Generous Heart</span>
+                <span class="donation-amount">$45</span>
+              </button>
             </a>
 
-            <a href="#">
-              <button class="post-button2">$15</button>
+            <a href="https://ironbase.mycartpanda.com/checkout/180653341:1" target="_blank">
+              <button class="donation-btn">
+                <span class="donation-title">Hero of Hope</span>
+                <span class="donation-amount">$80</span>
+              </button>
             </a>
 
-            <a href="#">
-              <button class="post-button2">$30</button>
-            </a>
-
-            <a href="#">
-              <button class="post-button2">$50</button>
-            </a>
-
-            <a href="#">
-              <button class="post-button2">$70</button>
-            </a>
-
-            <a href="#">
-              <button class="post-button2">$90</button>
-            </a>
-            <a href="#">
-              <button class="post-button2">$120</button>
-            </a>
-            <a href="#">
-              <button class="post-button2">$180</button>
+            <a href="https://ironbase.mycartpanda.com/checkout/180653355:1" target="_blank">
+              <button class="donation-btn">
+                <span class="donation-title">Great Angel of Charity</span>
+                <span class="donation-amount">$165</span>
+              </button>
             </a>
           </div>
           <div class="buttons-section1">
-            <a href="#">
-              <button class="post-button2">$8</button>
+            <a href="https://ironbase.mycartpanda.com/checkout/180653173:1" target="_blank">
+              <button class="donation-btn">
+                <span class="donation-title">Angel of the Heart</span>
+                <span class="donation-amount">$35</span>
+              </button>
             </a>
 
-            <a href="#">
-              <button class="post-button2">$12</button>
+            <a href="https://ironbase.mycartpanda.com/checkout/180653328:1" target="_blank">
+              <button class="donation-btn">
+                <span class="donation-title">Charitable Soul</span>
+                <span class="donation-amount">$60</span>
+              </button>
             </a>
 
-            <a href="#">
-              <button class="post-button2">$20</button>
+            <a href="https://ironbase.mycartpanda.com/checkout/180653342:1" target="_blank">
+              <button class="donation-btn">
+                <span class="donation-title">Power of Goodness</span>
+                <span class="donation-amount">$95</span>
+              </button>
             </a>
 
-            <a href="#">
-              <button class="post-button2">$40</button>
-            </a>
-            <a href="#">
-              <button class="post-button2">$60</button>
-            </a>
-
-            <a href="#">
-              <button class="post-button2">$80</button>
-            </a>
-
-            <a href="#">
-              <button class="post-button2">$100</button>
-            </a>
-            <a href="#">
-              <button class="post-button2">$150</button>
-            </a>
-            <a href="#">
-              <button class="post-button2">$200</button>
+            <a href="https://ironbase.mycartpanda.com/checkout/180653368:1" target="_blank">
+              <button class="donation-btn">
+                <span class="donation-title">Angel of Abundance</span>
+                <span class="donation-amount">$297</span>
+              </button>
             </a>
           </div>
         </div>
@@ -277,11 +266,6 @@ You could be the difference between pain and relief. Between despair and hope.
             <div class="sc-jXbUNg dHwLb">
               <div class="sc-jXbUNg jbBvcf"></div>
               <div class="sc-jXbUNg dTrGCo sc-gRtvSG fpURXW"></div>
-            </div>
-          </div>
-
-          <div class="button-pix">
-            <div class="texto" id="1">
             </div>
           </div>
         </div>
@@ -302,7 +286,34 @@ You could be the difference between pain and relief. Between despair and hope.
 
       <script data-cfasync="false" src="js/email-decode.min.js"></script>
       <script src="js/script.js"></script>
-      <script src="js/pix.js"></script>
+      <!-- Adicionar script para gerenciar parâmetros UTM -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Obter todos os parâmetros da URL atual
+          const currentUrl = new URL(window.location.href);
+          const urlParams = currentUrl.searchParams;
+          
+          // Verificar se existem parâmetros na URL
+          if (urlParams.toString()) {
+            // Obter todos os links de doação
+            const donationLinks = document.querySelectorAll('.buttons-section a[href*="mycartpanda.com"]');
+            
+            // Adicionar parâmetros a cada link de doação
+            donationLinks.forEach(link => {
+              const originalHref = link.getAttribute('href');
+              const checkoutUrl = new URL(originalHref);
+              
+              // Adicionar todos os parâmetros da URL atual ao link de checkout
+              urlParams.forEach((value, key) => {
+                checkoutUrl.searchParams.set(key, value);
+              });
+              
+              // Atualizar o href do link com os parâmetros adicionados
+              link.setAttribute('href', checkoutUrl.toString());
+            });
+          }
+        });
+      </script>
     </div>
   </body>
 </html> 

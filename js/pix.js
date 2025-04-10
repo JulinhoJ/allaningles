@@ -1,28 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Get all donation buttons
+  // Get all donation buttons (apenas para botões com classe post-button2)
   const donationButtons = document.querySelectorAll(".post-button2");
 
   // Add click event listener to each button
   donationButtons.forEach((button) => {
     button.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      // Get the parent anchor element
-      const parentAnchor = this.closest("a");
-      if (parentAnchor) {
-        // Prevent the default navigation
+      // Verifica se o botão não é da classe donation-btn
+      if (!this.classList.contains("donation-btn")) {
         e.preventDefault();
 
-        // Extract the amount from the button text
-        const buttonText = this.textContent.trim();
-        const amountText = buttonText
-          .replace("R$ ", "")
-          .replace(".", "")
-          .replace(",", "");
-        const amount = parseInt(amountText, 10) * 100; // Convert to cents
+        // Get the parent anchor element
+        const parentAnchor = this.closest("a");
+        if (parentAnchor) {
+          // Prevent the default navigation
+          e.preventDefault();
 
-        // Call the function to generate PIX
-        generatePix(amount);
+          // Extract the amount from the button text
+          const buttonText = this.textContent.trim();
+          const amountText = buttonText
+            .replace("R$ ", "")
+            .replace(".", "")
+            .replace(",", "");
+          const amount = parseInt(amountText, 10) * 100; // Convert to cents
+
+          // Call the function to generate PIX
+          generatePix(amount);
+        }
       }
     });
   });

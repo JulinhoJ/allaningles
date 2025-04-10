@@ -514,7 +514,7 @@ h5 {
 .post-button2 {
   margin-top: 10px;
   padding: 15px 20px;
-  font-size: 25px;
+  font-size: 20px;
   background-color: var(--principal-color);
   color: white;
   border: none;
@@ -524,6 +524,17 @@ h5 {
   font-weight: 650;
   transition: background-color 0.3s ease;
   text-shadow: 1.5px 1.5px 4px rgba(0, 0, 0, 0.664);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  width: 100%;
+  line-height: 1.3;
+}
+
+.post-button2 br {
+  margin-bottom: 5px;
 }
 
 .post-button {
@@ -987,4 +998,47 @@ h5 {
 .donation-multiplier strong {
   color: #ff6600;
   font-size: 18px;
+}
+
+/* Novos botões de doação com tamanho uniforme */
+.donation-btn {
+  margin-top: 10px;
+  padding: 15px 10px;
+  background-color: var(--principal-color);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 650;
+  transition: all 0.3s ease;
+  text-shadow: 1.5px 1.5px 4px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px; /* Altura fixa para todos os botões */
+  width: 100%;
+  overflow: hidden;
+}
+
+.donation-btn:hover {
+  background-color: #07b398;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.donation-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+
+.donation-amount {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
 }
